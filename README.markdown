@@ -4,13 +4,15 @@
 
 ## Overview
 
-The **Brand Library File Manager** is a web-based application for organizing and managing digital assets (e.g., banners, logos, emails) across multiple brands and categories. It offers a responsive interface for uploading, viewing, searching, and deleting files, with secure login and role-based access (admin and standard users). Files are stored in an AWS S3 bucket (`affwlresources`) and served via CloudFront for efficient access.
+The **Brand Library File Manager** is a web-based application for organizing and managing digital assets (e.g., banners, logos, emails) across multiple brands and categories. It offers a responsive interface for uploading, viewing, searching, and deleting files, with secure login and role-based access. Files are stored in an AWS S3 bucket (`affwlresources`) and served via CloudFront for efficient access.
 
-Key features include file previews, dynamic category creation, and admin-only file deletion. The backend uses Node.js/Express, and the frontend is built with vanilla JavaScript, styled with CSS and Font Awesome icons.
+The application supports two user roles: **staff** (regular employees who can view and upload files but cannot delete them) and **admin** (users who can view, upload, and delete files). Key features include file previews, dynamic category creation, and admin-only file deletion. The backend uses Node.js/Express, and the frontend is built with vanilla JavaScript, styled with CSS and Font Awesome icons.
 
 ## Features
 
-- **Secure Authentication**: Login with admin (delete privileges) or standard user roles.
+- **Secure Authentication**: Login with role-based access:
+  - **Staff Users**: Can view and upload files but cannot delete them.
+  - **Admin Users**: Can view, upload, and delete files.
 - **File Management**:
   - Upload multiple files with uploader metadata.
   - View files with image previews or icons for other formats.
@@ -102,8 +104,9 @@ Key features include file previews, dynamic category creation, and admin-only fi
 ## Usage
 
 1. **Login**:
-   - Use credentials from `.env` (e.g., admin or staff).
-   - Admins can delete files; standard users can view/upload.
+   - Use credentials from `.env` (admin or staff).
+   - **Staff Users**: Can view and upload files but cannot delete them.
+   - **Admin Users**: Can view, upload, and delete files.
 
 2. **Dashboard**:
    - **Navigation**: Select a brand (e.g., Cricpayz) and category (e.g., Banners).
@@ -111,7 +114,7 @@ Key features include file previews, dynamic category creation, and admin-only fi
    - **View/Download**: Click file previews or download buttons to open files.
    - **Search**: Use the search icon to find files across all brands/categories.
    - **Add Categories**: Click the "+" icon next to "Categories" to create a new category.
-   - **Delete Files** (admin-only): Click the trash icon on a file card.
+   - **Delete Files** (admin-only): Click the trash icon on a file card (visible only to admins).
 
 3. **Logout**:
    - Click the logout button in the header.
