@@ -160,10 +160,6 @@ Key features include file previews, dynamic category creation, and admin-only fi
 
 Adhere to coding style and include tests where possible.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgments
 
 - AWS for S3 and CloudFront integration.
