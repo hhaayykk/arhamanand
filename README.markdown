@@ -55,7 +55,7 @@ The application supports two user roles: **staff** (regular employees who can vi
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/brand-library-file-manager.git
+   git clone https://github.com/hhaayykk/arhamanand.git
    cd brand-library-file-manager
    ```
 
